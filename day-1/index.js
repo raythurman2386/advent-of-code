@@ -1,25 +1,20 @@
-// --- Day 1: Chronal Calibration-- -
-//   "We've detected some temporal anomalies," one of Santa's Elves at the Temporal Anomaly Research and Detection Instrument Station tells you. She sounded pretty worried when she called you down here. "At 500-year intervals into the past, someone has been changing Santa's history!"
-
-// "The good news is that the changes won't propagate to our time stream for another 25 days, and we have a device" - she attaches something to your wrist - "that will let you fix the changes with no such propagation delay. It's configured to send you 500 years further into the past every few days; that was the best we could do on such short notice."
-
-// "The bad news is that we are detecting roughly fifty anomalies throughout time; the device will indicate fixed anomalies with stars. The other bad news is that we only have one device and you're the best person for the job! Good lu--" She taps a button on the device and you suddenly feel like you're falling. To save Christmas, you need to get all fifty stars by December 25th.
+// --- Day 1: The Tyranny of the Rocket Equation-- -
+//   Santa has become stranded at the edge of the Solar System while delivering presents to other planets! To accurately calculate his position in space, safely align his warp drive, and return to Earth in time to save Christmas, he needs you to bring him measurements from fifty stars.
 
 // Collect stars by solving puzzles.Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first.Each puzzle grants one star.Good luck!
 
-// After feeling like you've been falling for a few minutes, you look at the device's tiny screen. "Error: Device must be calibrated before first use. Frequency drift detected. Cannot maintain destination lock." Below the message, the device shows a sequence of changes in frequency(your puzzle input).A value like + 6 means the current frequency increases by 6; a value like - 3 means the current frequency decreases by 3.
+// The Elves quickly load you into a spacecraft and prepare to launch.
 
-// For example, if the device displays frequency changes of + 1, -2, +3, +1, then starting from a frequency of zero, the following changes would occur:
+// At the first Go / No Go poll, every Elf is Go until the Fuel Counter - Upper.They haven't determined the amount of fuel required yet.
 
-// Current frequency  0, change of + 1; resulting frequency  1.
-// Current frequency  1, change of - 2; resulting frequency - 1.
-// Current frequency - 1, change of + 3; resulting frequency  2.
-// Current frequency  2, change of + 1; resulting frequency  3.
-// In this example, the resulting frequency is 3.
+// Fuel required to launch a given module is based on its mass.Specifically, to find the fuel required for a module, take its mass, divide by three, round down, and subtract 2.
 
-// Here are other example situations:
+// For example:
 
-// +1, +1, +1 results in 3
-//   + 1, +1, -2 results in 0
-//     - 1, -2, -3 results in -6
-// Starting with a frequency of zero, what is the resulting frequency after all of the changes in frequency have been applied ?
+// For a mass of 12, divide by 3 and round down to get 4, then subtract 2 to get 2.
+// For a mass of 14, dividing by 3 and rounding down still yields 4, so the fuel required is also 2.
+// For a mass of 1969, the fuel required is 654.
+// For a mass of 100756, the fuel required is 33583.
+// The Fuel Counter - Upper needs to know the total fuel requirement.To find it, individually calculate the fuel needed for the mass of each module(your puzzle input), then add together all the fuel values.
+
+// What is the sum of the fuel requirements for all of the modules on your spacecraft ?
